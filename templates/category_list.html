@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+    <div> 
+        <div> <h1> CATEGORY LIST   </h1></div>
+        <br>
+        <div> <i class="material-icons" style="font-size:24px;color:rgb(23, 120, 231)">add</i> </div>
+        <hr>
+        <table border = "1" cellpadding = "3" cellspacing = "3">
+                <tr>
+                    <td> ID </td>
+                    <td> DESCRITION </td>
+                    <td> UPDATE </td>
+                    <td> DELETE </td>
+                </tr>
+                    
+            {% for cols in data['category_data'] %}
+                <tr>
+                    <td>{{cols.id}}</td>
+                    <td>{{cols.title}}</td>
+
+                    <td><i class="material-icons" style="font-size:24px;color:rgb(238, 139, 11)">update</i></td>
+                    <td>
+                        <a href="{{url_for('cat_delete')}}?cat_id={{cols.id}}"  title="Delete Item" class="btn btn-danger" >
+                            <i class="material-icons" style="font-size:24px;color:red">delete</i>
+                        </a>
+                        
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+    <br>
+    <br>
+    <div><a href="/Home">Back to Index</a></div>
+
+    </body>
+</html>
+

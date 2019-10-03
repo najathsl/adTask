@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+    <div> 
+        <div> <h1> PRODUCTS  </h1> </div>
+        <br>
+        <div> <i class="material-icons" style="font-size:24px;color:rgb(23, 120, 231)">add</i> </div>
+        <hr>
+        <table border = "1" cellpadding = "3" cellspacing = "3">
+                <tr>
+                    <td> PRD .ID</td>
+                    <td> P.DESCRITION </td>
+                    <td> CAT.ID</td>
+                    <td> CAT.DESC</td>
+                    <td> UPDATE </td>
+                    <td> DELETE </td>
+                </tr>
+            
+            <!-- data_arr = {'prdId':result[i][0],'prdName':result[i][1],'catid':result[i][2],'catName':result[i][3]} -->
+            <!--data_arr = {'prdId':result[i][0],'prdName':result[i][1],'catid':result[i][2]}-->
+            {% for cols in data['category_data'] %}
+                <tr>
+                    <td>{{cols.prdId}}</td>
+                    <td>{{cols.prdName}}</td>
+                    <td>{{cols.catid}}</td>
+                    <td>{{cols.catName}}</td>
+                    
+
+                    <td><a href="#" > <i class="material-icons" style="font-size:24px;color:rgb(238, 139, 11)">update</i></a></td>
+                    <td>
+                        <a href="{{url_for('prod_delete')}}?p_id={{cols.prdId}}"  title="Delete Item" class="btn btn-danger" >
+                            <i class="material-icons" style="font-size:24px;color:red">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+
+    <br>
+    <br>
+    
+    <div><a href="/Home">Back to Index</a></div>
+
+    </body>
+</html>
+

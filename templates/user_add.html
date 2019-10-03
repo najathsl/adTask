@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+    <body>
+        <h1> <h1> ADD NEW USERS  </h1> </h1>
+        <br>
+        <div> <i class="material-icons" style="font-size:24px;color:rgb(23, 120, 231)">add</i> </div>
+        <hr>
+        <form action="{{url_for('save_user_form')}}" method="POST" enctype = "multipart/form-data">
+
+            <div> <label>User Name : </label> </div>
+            <div> <input type="text" id="txtusername" name="txtusername" /> </div>
+
+            <div> <label>Password :</label> </div>
+            <div> <input type="text" id="txtpassword" name="txtpassword" /> </div>
+            
+
+            <div> <label>Insert Allowed :</label> </div>
+            <select name="optinsert" id="optinsert" value="0">
+                <option>0</option>
+                <option>1</option>
+              </select>
+            <br>
+
+            <div> <label>Update Allowed :</label> </div>
+            <select name="optupdate" id="optupdate" value="0">
+                <option>0</option>
+                <option>1</option>
+              </select>
+            <br>
+            
+            <div> <label>Delete Allowed :</label> </div>
+            <select name="optdelete" id="optdelete" value="0">
+                <option>0</option>
+                <option>1</option>
+              </select>
+            <br>
+            
+
+            <br>
+            <br>
+            <input type="submit" value="Submit" /> 
+            
+
+        </form>
+
+    </body>
+    <br>
+    <br>
+    <div><a href="/Home">Back to Index</a></div>
+    <div><a href="/Home"><i class="material-icons" style="font-size:24px;color:rgb(23, 120, 231)">back </i></a></div>
+    
+
+    
+</html>
+
+

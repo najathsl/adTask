@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+    <body>
+        <h1> <h1> ADD NEW PRODUCTS  </h1> </h1>
+        <hr>
+        <form action="{{url_for('save_prd_form')}}" method="POST" enctype = "multipart/form-data">
+
+            <div> <label>Product Description * : </label> </div>
+            <div> <input type="text" id="txtprd_desc" name="txtprd_desc" /> </div>
+            <div> <label>Category ID * :</label> </div>
+            <div> <input type="text" id="txtcat_id" name="txtcat_id" /> </div>
+            <br>
+            <br>
+            <input type="submit" value="Submit" /> 
+            
+
+        </form>
+
+    </body>
+    <br>
+    <br>
+    <div><a href="/Home">Back to Index</a></div>
+
+    
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+    <body>
+      
+    <h1> <h1> ADD NEW CATEGORY  </h1> </h1>
+    <hr>
+        <form action="{{url_for('save_cat_form')}}" method="POST" enctype = "multipart/form-data">
+
+            <div> <label>Category ID *</label> : </div>
+            <div> <input type="text" id="txtcategory_desc" name="txtcategory_desc" /> </div>
+            <br>
+            <br>
+            <input type="submit" value="Submit" /> 
+            
+
+        </form>
+
+    </body>
+    
+    <br>
+    <br>
+    <div><a href="/Home">Back to Index</a></div>
+
+    
+</html>

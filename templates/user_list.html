@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+    <div> 
+        <div> <h1> USERS AND PRIVILAGES  </h1> </div>
+        <hr>
+        <table border = "1" cellpadding = "3" cellspacing = "3">
+                <tr>
+                    <td> USER ID </td>
+                    <td> USER NAME </td>
+                    <td> PASSWORD </td>
+                    <td> ADD ALLOWED </td>
+                    <td> UPDATE ALLOWED </td>
+                    <td> DELETE ALLOWED </td>
+                    <td> UPDATE  </td>
+                    <td> REMOVE  </td>
+                </tr>
+                    
+            <!--data_arr = {'uID':result[i][0],'uName':result[i][1],'uPass':result[i][2],'add_y':result[i][3],'update_y':result[i][4],'delete_y':result[i][5]} -->
+            {% for cols in data['category_data'] %}
+                <tr>
+                    <td>{{cols.uID}}</td>
+                    <td>{{cols.uName}}</td>
+                    <td>{{cols.uPass}}</td>
+                    <td>{{cols.add_y}}</td>
+                    <td>{{cols.update_y}}</td>
+                    <td>{{cols.delete_y}}</td>
+
+                    <td><i class="material-icons" style="font-size:24px;color:rgb(238, 139, 11)">update</i></td>
+                    <td><i class="material-icons" style="font-size:24px;color:red">delete</i></td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+    <br>
+    <br>
+
+    <div><a href="/Home">Back to Index</a></div>
+
+
+    </body>
+</html>
+
